@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+display: flex;
+font-weight: 400;
+font-style: italic;
+align-items: center;
+gap: 15px;
+justify-content: center;
+text-transform: uppercase;
+border-bottom: 10px solid #140744;
+margin-top: 20px;
+color: #140744;
+}
+
+button {
+background-color: #140744;
+font-style: italic;
+font-size: large;
+border-radius: 10px;
+font-weight: bold;
+text-transform: uppercase;
+color: #f0f0AD;
+cursor: pointer;
+margin-bottom: 8px;
+}
+
+form {
+    padding: 24px;
+    text-align: center;
+    display: none;
+}
+
+form input {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
+input {
+    background-color: #ececc2;
+    color: #140744;
+}
+
+input, button{
+    padding: 8px;
+}
+
+h2{
+    margin-bottom: 10px;
+}
+
+.lista-tarefas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+input[type = "checkbox"]{
+    display: none;
+}
+
+.checkbox-custom{
+    width: 20px;
+    height: 20px;
+    border: 2px solid #555;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked + .checkbox-custom {
+    background-color: #1df809;
+    border-color: #15ff00;
+}
+
+input[type="checkbox"]:checked + .checkbox-custom::after {
+    display: block;
+}
+
+.checkbox-custom::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    display: none;
+    background-color: white;
+    clip-path: polygon(14% 44%, 0 60%, 50% 100%, 100% 15%, 80% 0, 43% 62%);
+}
+
+.lista-tarefas li{
+    display: flex;
+    width: 100%;
+    max-width: 687px;
+    padding: 16px;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(240, 240, 240, 0.25);
+    color: #5a5a5a;
+    font-size: 20px;
+    border: none;
+    transition: border 0.3s ease;
+}
+
+.lista-tarefas li p {
+    padding-right: 60px;
+}
+
+.lista-tarefas li:hover {
+    border: 1px solid #d9d9d9;
+}
+
+.lista-tarefas-elementos button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    height: auto;
+    margin-top: 10px
+}
+
+.lista-tarefas-elementos{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
